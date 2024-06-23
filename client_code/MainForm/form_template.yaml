@@ -16,3 +16,13 @@ components:
   properties: {text: Nature Guide Editor}
   type: Label
   layout_properties: {slot: title}
+- name: sidebar_panel
+  properties: {}
+  type: ColumnPanel
+  layout_properties: {slot: left-nav}
+  components:
+  - name: new_guide_button
+    properties: {text: New Guide, role: outlined-button}
+    type: Button
+    layout_properties: {grid_position: 'EBLBHJ,LGDXPT'}
+    event_bindings: {click: new_guide_button_click}
