@@ -1,5 +1,5 @@
 import unittest
-from NatureGuides.Guide import *
+from .Guide import *
 
 class GuideTests(unittest.TestCase):
   def test_add_guide(self):

@@ -1,7 +1,10 @@
+# original code by stefano.menci
+# https://anvil.works/forum/t/input-box-and-alert2/12242
+
 import anvil.server
 import anvil
 from functools import partial
-# from anvil_extras import augment
+from anvil_extras import augment
 # from typing import List, Dict
 
 
@@ -136,7 +139,7 @@ class InputBoxRow:
 
 
 class InputBox:
-    def __init__(self, title=None, buttons=None, large=False, dismissible=True, default_button='OK', column_ratio=0.6,
+    def __init__(self, title=None, buttons=None, large=False, dismissible=True, default_button='OK', column_ratio=0.3,
                  validator=None, form_show=None, items=None):
         self.title = title
         self.buttons = ['OK'] if buttons is None else buttons
@@ -242,14 +245,14 @@ class InputBox:
         func(results=self.results, rows=self.rows, **event_args)
 
 
-def alert2(richtext, title=None, buttons=None, large=False, dismissible=True, default_button='OK'):
+def alert_box(richtext, title=None, buttons=None, large=False, dismissible=True, default_button='OK'):
     ib = InputBox(title, buttons, large, dismissible, default_button=default_button)
     ib.add_richtext(richtext)
     ib.show()
     return ib.clicked_button
 
 
-def input_box(items, title=None, buttons=None, large=False, dismissible=True, default_button='OK', column_ratio=0.6, validator=None, form_show=None):
+def input_box(items, title=None, buttons=None, large=False, dismissible=True, default_button='OK', column_ratio=0.3, validator=None, form_show=None):
     ib = InputBox(items=items, title=title, buttons=buttons, large=large, dismissible=dismissible, default_button=default_button, column_ratio=column_ratio, validator=validator, form_show=form_show)
     ib.show()
     return ib.results

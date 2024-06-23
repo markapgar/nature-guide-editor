@@ -9,3 +9,6 @@ class GuideInfoForm(GuideInfoFormTemplate):
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
+
+  def form_show(self, **event_args):
+    self.refresh_data_bindings()
