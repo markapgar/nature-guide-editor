@@ -1,12 +1,10 @@
-from ._anvil_designer import MainFormTemplate
+from ._anvil_designer import GuideListTemplate
 from anvil import *
 import anvil.server
-from ..input_box import InputBox, alert_box, input_box, multi_select_dropdown
-from .GuideInfoForm import GuideInfoForm
-from .GuideList import GuideList
+from ...input_box import InputBox, alert_box, input_box, multi_select_dropdown
 
 
-class MainForm(MainFormTemplate):
+class GuideList(GuideListTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
@@ -21,15 +19,4 @@ class MainForm(MainFormTemplate):
       if not ok:
         alert_box(msg)
         return
-      g = GuideInfoForm()
-      g.guide_id = 'BWA!!!!'
-      self.content_panel.add_component(g)
 
-  def show_guides_buttton_click(self, **event_args):
-    g = GuideList()
-    self.content_panel.add_component(g)
-    pass
-
-      
-        
-    

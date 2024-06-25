@@ -2,11 +2,15 @@ unique_ids:
   forms:
     MainForm: LTEZNWSXHMM4B6HJYOXUVYORKJD4LRUE
     MainForm.GuideInfoForm: '1719108964638260639844436.4273'
+    MainForm.GuideList: '1719280362141376475466983.8297'
+    MainForm.GuideList.GuideListTemplate: '1719280654488433189086588.62964'
   modules:
     input_box: '1719111107559262385479227.2453'
   server_modules:
     NatureGuides: '1719103861810429246762980.7155'
     NatureGuides.Guide: '1719103928564732949630995.1636'
+    NatureGuides.PersistNatureGuidesAnvil: ELEYHDEIDQVVTHSYBLS3ZJK4ZXSY4BPU
+    NatureGuides.PersistNatureGuidesTest: CEG5JNS3DEXANKSDOJAFI3AMZTQYFJQH
     NatureGuides.Validate: BBVHCXIMRM4DVI7AVTY7U6PTWDUTARQM
     NatureGuides.test_guide: A6JDOP7IE63237DXGVA3BZMSBZUSMBHD
   assets:
