@@ -4,7 +4,7 @@ from anvil.tables import app_tables
 import anvil.server
 
 
-class PersistNatureGuidesAnvil():
+class PersistNatureGuidesOrm():
   def __init__(self):
     pass
 

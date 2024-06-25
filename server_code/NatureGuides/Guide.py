@@ -1,6 +1,6 @@
 import anvil.server
 from .Validate import *
-from .PersistNatureGuidesAnvil import PersistNatureGuidesAnvil
+from .PersistNatureGuidesOrm import PersistNatureGuidesOrm
 from .PersistNatureGuidesTest import PersistNatureGuidesTest
 
 import inspect
@@ -20,7 +20,7 @@ def add_guide(title):
   return True, '', Guide.add_guide(title)
 
 class Guide():
-  persist = PersistNatureGuidesAnvil()
+  persist = PersistNatureGuidesOrm()
 
   def __init__(self) -> None:
     self.title = ''
