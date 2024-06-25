@@ -17,3 +17,12 @@ services:
   client_config: {}
   server_config: {}
 startup: {type: form, module: MainForm}
+db_schema:
+  guides:
+    client: none
+    server: full
+    columns:
+    - name: title
+      admin_ui: {width: 200, order: 0}
+      type: string
+    title: guides

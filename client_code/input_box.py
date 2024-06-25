@@ -1,3 +1,6 @@
+import anvil.tables as tables
+import anvil.tables.query as q
+from anvil.tables import app_tables
 # original code by stefano.menci
 # https://anvil.works/forum/t/input-box-and-alert2/12242
 

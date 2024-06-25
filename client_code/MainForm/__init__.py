@@ -1,5 +1,8 @@
 from ._anvil_designer import MainFormTemplate
 from anvil import *
+import anvil.tables as tables
+import anvil.tables.query as q
+from anvil.tables import app_tables
 import anvil.server
 from ..input_box import InputBox, alert_box, input_box, multi_select_dropdown
 from .GuideInfoForm import GuideInfoForm
