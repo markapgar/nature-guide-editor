@@ -8,8 +8,8 @@ components:
   - name: guides_grid
     properties:
       columns:
-      - {id: JKSDUP, title: Guide Title, data_key: title, width: 863.466552734375, expand: false}
-      - {id: HXAWTV, data_key: id, title: Id}
+      - {id: JKSDUP, title: Guide Title, data_key: title, width: 867.7998046875, expand: false}
+      - {id: HXAWTV, data_key: '', title: ''}
       visible: true
     type: DataGrid
     components:

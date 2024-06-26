@@ -13,7 +13,11 @@ class GuideList(GuideListTemplate):
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
+    self.list_guides()
 
+  def list_guides(self):
+    self.guide_repeating_panel.items = anvil.server.call('list_guides')
+    
   def new_guide_button_click(self, **event_args):
     results = input_box(title='', items=[{'prompt': 'Title:', 'text': ''}], buttons=['OK', 'Cancel'])
     if results['clicked_button'] == 'OK':
@@ -22,4 +26,5 @@ class GuideList(GuideListTemplate):
       if not ok:
         alert_box(msg)
         return
+      self.list_guides()
 

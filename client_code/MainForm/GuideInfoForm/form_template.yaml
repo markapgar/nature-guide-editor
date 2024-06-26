@@ -14,10 +14,19 @@ components:
     type: Label
     data_bindings:
     - {property: text, code: 'self.item[''guide_id'']', writeback: false}
-- name: outlined_card_1
-  properties: {role: outlined-card}
+- name: content_panel
+  properties: {role: outlined-card, col_widths: '{"HXTANQ":15,"AMGMBN":45}'}
   type: ColumnPanel
   layout_properties: {grid_position: 'AEBAGD,PCTOSR', full_width_row: true}
+  components:
+  - name: label_1
+    properties: {text: 'Title:'}
+    type: Label
+    layout_properties: {grid_position: 'TCNVNF,HXTANQ'}
+  - name: title_text_box
+    properties: {}
+    type: TextBox
+    layout_properties: {grid_position: 'TCNVNF,AMGMBN'}
 container:
   type: ColumnPanel
   event_bindings: {show: form_show}

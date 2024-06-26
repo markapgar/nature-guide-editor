@@ -12,3 +12,6 @@ class GuideListTemplate(GuideListTemplateTemplate):
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
+
+  def edit_button_click(self, **event_args):
+    alert(self.item['title'] + self.item['_id'])
