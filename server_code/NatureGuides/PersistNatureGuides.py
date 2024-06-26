@@ -27,11 +27,9 @@ class PersistNatureGuides():
       return row.get_id()
     return None
 
-  # def find_id_for_title(self, title):
-  #   row = app_tables.guides.get(title=q.ilike(title))
-  #   if row is not None:
-  #     return row.get_id()
-  #   return None
-
   def add_guide(self, title):
     return app_tables.guides.add_row(title=title).get_id()
+
+  def list_guides(self):
+    rows = app_tables.guides.search()
+    return self.search_to_dict(rows)

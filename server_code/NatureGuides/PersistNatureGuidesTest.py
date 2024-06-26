@@ -12,3 +12,6 @@ class PersistNatureGuidesTest():
     if self.guide['title'].lower() == title.lower():
       return self.guide['_id']
     return None
+  
+  def list_guides(self):
+    return [self.guide]

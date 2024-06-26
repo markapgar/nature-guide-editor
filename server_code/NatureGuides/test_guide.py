@@ -31,5 +31,8 @@ class GuideTests(unittest.TestCase):
     ok, msg, id = add_guide(dup)
     self.assertFalse(ok, test_fail_msg)
 
-    
-    # self.assertFalse(ok, test_fail_msg)
+  def test_list_guides(self):
+    guides = list_guides()
+    self.assertEqual(1, len(guides))
+    for g in guides:
+      self.assertIsNotNone(g['title'])

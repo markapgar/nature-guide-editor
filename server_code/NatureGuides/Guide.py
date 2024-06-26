@@ -18,6 +18,10 @@ def add_guide(title):
 
   return True, '', Guide.add_guide(title)
 
+@anvil.server.callable()
+def list_guides():
+  return Guide.list_guides()
+
 class Guide():
   persist = PersistNatureGuides()
 
@@ -36,3 +40,6 @@ class Guide():
   def add_guide(cls, title):
     return cls.persist.add_guide(title)
     
+  @classmethod
+  def list_guides(cls):
+    return cls.persist.list_guides()
