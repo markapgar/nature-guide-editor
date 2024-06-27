@@ -14,3 +14,5 @@ class GuideInfoForm(GuideInfoFormTemplate):
 
   def form_show(self, **event_args):
     self.refresh_data_bindings()
+    self.title_label.text = self.guide_id
+    

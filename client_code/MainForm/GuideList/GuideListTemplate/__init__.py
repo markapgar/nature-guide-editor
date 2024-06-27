@@ -15,3 +15,5 @@ class GuideListTemplate(GuideListTemplateTemplate):
 
   def edit_button_click(self, **event_args):
     alert(self.item['title'] + self.item['_id'])
+    f = get_open_form()
+    f.show_guide(self.item['_id'])

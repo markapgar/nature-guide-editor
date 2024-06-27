@@ -16,23 +16,15 @@ class MainForm(MainFormTemplate):
 
     # Any code you write here will run before the form opens.
 
-  def new_guide_button_click(self, **event_args):
-    results = input_box(title='', items=[{'prompt': 'Title:', 'text': ''}], buttons=['OK', 'Cancel'])
-    if results['clicked_button'] == 'OK':
-      title = results['Title:']
-      ok, msg, id = anvil.server.call('add_guide', title)
-      if not ok:
-        alert_box(msg)
-        return
-      g = GuideInfoForm()
-      g.guide_id = 'BWA!!!!'
-      self.content_panel.add_component(g)
-
   def show_guides_buttton_click(self, **event_args):
     g = GuideList()
     self.content_panel.add_component(g)
     pass
 
-      
+  def show_guide(self, id):
+    self.content_panel.clear()
+    g = GuideInfoForm()
+    g.guide_id = id
+    self.content_panel.add_component(g)
         
     
